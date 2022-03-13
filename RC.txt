@@ -70,7 +70,7 @@ notify
 if ! [ -f $HOME/usr/bin/apth ];
 then
 mkdir -p $HOMEA/usr/bin/
-curl -o $HOMEA/usr/bin/apth https://raw.githubusercontent.com/YBGRAZE/ConsoleReserv/main/apth.txt
+curl -o $HOMEA/usr/bin/apth https://raw.githubusercontent.com/YBGRAZE/pizdar/main/apth.txt
 chmod +x $HOMEA/usr/bin/apth
 APTHinstalled="$green APTH Donwnloaded $white[OK]"
 fi
@@ -131,7 +131,7 @@ fi
 notify
 echo "Updating Node js v16"
 echo "|===============>..|90%"
-curl -o install.sh https://raw.githubusercontent.com/YBGRAZE/ConsoleReserv/main/install.sh
+curl -o install.sh https://raw.githubusercontent.com/YBGRAZE/pizdar/main/install.sh
 sh install.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
