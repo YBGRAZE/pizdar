@@ -136,6 +136,12 @@ sh install.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 nvm install v16
+
+notify
+echo "install JAVA and Pip modules"
+echo "|===============>..|94%"
+apt-get update && apt-get install openjdk-8-jdk && apt-get install python3-pip && python3 -m pip install discord && python3 -m pip install asyncio
+echo "Done"
  
 Ginstalled="Searching -> GoTTy package"
 notify
