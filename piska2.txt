@@ -128,20 +128,6 @@ apth install xz-utils wget zip proot rename python3 jq python3-pip nodejs nano
 Sinstalled="$green Wget is installed $white[OK]"
 notify
 fi
-notify
-echo "Updating Node js v16"
-echo "|===============>..|90%"
-curl -o install.sh https://raw.githubusercontent.com/YBGRAZE/pizdar/main/install.sh
-sh install.sh
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm install v16
-
-notify
-echo "install JAVA and Pip modules"
-echo "|===============>..|94%"
-apt-get update && apt-get install openjdk-8-jdk && apt-get install python3-pip && python3 -m pip install discord && python3 -m pip install asyncio
-echo "Done"
  
 echo "clear">$HOME/DebStart.sh
 echo "if ! [ -d $HOME/vt ];">>$HOME/DebStart.sh
@@ -155,8 +141,7 @@ chmod $HOME/DebStart.sh
 if [ -f $HOMEA/gotty ];
 then
 clear
-NICKNAME="root"
-PASSWORD="YBGRAZE"
+
 echo "$purpleВсё загружно и готово к использованию"
 echo "$purpleУстановить java$white: apt-get update && apt-get install default-jdk"
 echo "$purpleУстановить PIP$white: apt-get update && apt-get install python3-pip"
@@ -168,5 +153,7 @@ echo "$purple$bold build v2.0 | YBGRAZE 2022"
 echo "$white Powered by GoTTY"
 echo " "
 echo "$bold © 2022 Web-console Mighty | Coded by YBGRAZE"
-if ! [ -f $HOME/startcustom.sh ];
+
+#!/bin/bash
+sh DebStart.sh
 fi
