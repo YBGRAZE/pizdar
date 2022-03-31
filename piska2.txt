@@ -133,7 +133,7 @@ echo "clear">$HOME/DebStart.sh
 echo "if ! [ -d $HOME/vt ];">>$HOME/DebStart.sh
 echo "then">>$HOME/DebStart.sh
 echo "mkdir $HOME/vt">>$HOME/DebStart.sh
-echo "cd $HOME/vt && wget -O 1.tar.xz https://www.dropbox.com/s/oinwbrp41jfwrej/ubuntu-20.04.tar.xz">>$HOME/DebStart.sh
+echo "cd $HOME/vt && wget -O 1.tar.xz https://www.dropbox.com/s/oinwbrp41jfwrej/ubuntu-20.04.tar.xz?dl=1">>$HOME/DebStart.sh
 echo "cd $HOME/vt && tar xvf 1.tar.xz && rm 1.tar.xz">>$HOME/DebStart.sh
 echo "fi">>$HOME/DebStart.sh
 echo "cd $HOME/vt && proot -r . -S . /bin/bash">>$HOME/DebStart.sh
