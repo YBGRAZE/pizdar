@@ -62,6 +62,7 @@ echo "$green $Ginstalled"
 APTHinstalled='Initialising environment -> APTH'
 notify
 echo '|==>...................|10%'
+clear
 STARALL="$STAR0:$STAR1:$STAR2:$STAR3:$STAR4:$STAR5:$STAR6:$STAR7:$STAR8"
 PATALL="$HOMEA/bin:$HOMEA/usr/bin:$HOMEA/sbin:$HOMEA/usr/sbin:$HOMEA/etc/init.d:$HOMEA/udocker:$PATH"
  
@@ -72,10 +73,12 @@ then
 mkdir -p $HOMEA/usr/bin/
 curl -o $HOMEA/usr/bin/apth https://raw.githubusercontent.com/YBGRAZE/pizdar/main/apth.txt
 chmod +x $HOMEA/usr/bin/apth
+clear
 APTHinstalled="$green APTH Donwnloaded $white[OK]"
 fi
 Linstalled='Initialising environment -> LIBRARY'
 notify
+clear
 echo '|==========>...........|50%'
  
 Linstalled="$yellow LIBRARY_PATH already modifed $white[info]"
@@ -84,6 +87,7 @@ if ! [ -n "$LIBRARY_PATH" ];
 then
 export LIBRARY_PATH=$STARALL
 Linstalled="LIBRARY_PATH is installed [OK]"
+clear
 fi
  
 LDinstalled='Initialising environment -> LD LIBRARY '
@@ -95,18 +99,21 @@ notify
 if ! [ -n "$LD_LIBRARY_PATH" ];
 then
 export LD_LIBRARY_PATH=$STARALL
+clear
 LDinstalled="LD_LIBRARY_PATH is installed [OK]"
 notify
  
 Pinstalled='Initialising environment -> PATH '
 echo "|===============>......|75%"
 notify
+clear
 export PATH=$PATALL
 Pinstalled="PATH env modifed [OK]"
  
 notify
 echo "Rebooting system bash"
 echo "|\================/|"
+clear
 clear
 sh $HOME/1.sh
 exit 1
@@ -117,6 +124,7 @@ Sinstalled="Searching -> wget package"
 echo "|===============>....|70%"
 Sinstalled="Wget already installed skip it [Info]"
 if ! [ -f $HOMEA/usr/bin/wget ];
+clear
 then
 notify
  
@@ -126,6 +134,7 @@ echo "|===============>|80%"
 mkdir -p $HOMEA
 apth install xz-utils wget zip proot rename python3 jq python3-pip nodejs nano
 Sinstalled="$green Wget is installed $white[OK]"
+clear
 notify
 fi
  
