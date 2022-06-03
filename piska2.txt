@@ -147,7 +147,6 @@ echo "$purpleУстановить java$white: apt-get update && apt-get install 
 echo "$purpleУстановить PIP$white: apt-get update && apt-get install python3-pip"
 echo "$purpleУстановить модули$white: python3 -m pip install MODULE"
 echo "$purpleЗапустить скрипт$white: python3 SCRIPT.py"
-echo "$white кста $red FrozzenGame PIDOR"
 echo " "
 echo "$purple$bold build v2.0 | YBGRAZE 2022"
 echo "$white Powered by GoTTY"
